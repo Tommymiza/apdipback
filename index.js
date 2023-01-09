@@ -11,7 +11,8 @@ const fileUpload = require("express-fileupload");
 const app = express();
 
 app.use(cors({
-  origin: "*"
+  origin: "*",
+  methods: ["POST","GET"]
 }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
